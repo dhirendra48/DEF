@@ -51,6 +51,7 @@ DEF/
 └── Image/                    # Images folder (add your photos here)
 ```
 
+
 ## Setup Instructions
 
 ### 1. **Add Your Profile Image**

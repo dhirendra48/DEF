@@ -14,7 +14,7 @@ A modern, responsive portfolio website showcasing physics research, projects, an
 📱 **Responsive Layout**
 - Desktop, tablet, and mobile optimized
 - Hamburger menu for mobile navigation
-- Flexible grid systems
+- Flexible grid systems.
 
 🎨 **Interactive Elements**
 - Smooth scrolling navigation

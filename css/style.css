@@ -39,6 +39,9 @@ body {
     background-color: var(--light-bg);
     line-height: 1.6;
     transition: var(--transition);
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
 }
 
 /* Header & Navigation */
@@ -51,6 +54,9 @@ body {
     border-bottom: 1px solid var(--border-color);
     padding: 1rem 0;
     transition: var(--transition);
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 [data-theme="dark"] .header {
@@ -66,6 +72,8 @@ body {
     justify-content: space-between;
     align-items: center;
     position: relative;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -219,6 +227,8 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Main Content */
@@ -854,6 +864,10 @@ section h2 {
         padding: 0 1rem;
     }
 
+    .nav-container {
+        padding: 0 1rem;
+    }
+
     .hero-content {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -971,6 +985,10 @@ section h2 {
     }
 
     .container {
+        padding: 0 1.5rem;
+    }
+
+    .nav-container {
         padding: 0 1.5rem;
     }
 

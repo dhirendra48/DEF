@@ -939,8 +939,33 @@ section h2 {
         line-height: 1.2;
     }
 
+    .welcome-text {
+        font-size: 0.85rem;
+        margin-bottom: 0.5rem;
+        letter-spacing: 0.5px;
+    }
+
+    .name {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin: 0.5rem 0 1rem;
+    }
+
+    .typing-text {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+    }
+
     .hero-subtitle {
+        font-size: 0.95rem;
+        line-height: 1.7;
+        margin-bottom: 1.5rem;
+    }
+
+    .tagline {
         font-size: 1rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.7;
     }
 
     .hero-buttons {
@@ -951,12 +976,44 @@ section h2 {
     .btn {
         width: 100%;
         justify-content: center;
-        padding: 0.75rem 1.5rem;
-        font-size: 0.9rem;
+        padding: 0.875rem 1.5rem;
+        font-size: 0.95rem;
+        min-height: 48px;
     }
 
     section {
         padding: 2rem 0;
+    }
+
+    section h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
+        line-height: 1.3;
+    }
+
+    .content-section {
+        font-size: 0.95rem;
+        line-height: 1.8;
+    }
+
+    h3 {
+        font-size: 1.15rem;
+        line-height: 1.3;
+    }
+
+    p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+
+    .project-description {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .tag {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.6rem;
     }
 
     section h2 {
@@ -1216,8 +1273,57 @@ section h2 {
     }
 
     section h2 {
-        font-size: 1.75rem;
+        font-size: 2rem;
         margin-bottom: 2rem;
+        line-height: 1.3;
+    }
+
+    .welcome-text {
+        font-size: 0.9rem;
+        margin-bottom: 0.75rem;
+        letter-spacing: 0.5px;
+    }
+
+    .name {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        margin: 0.75rem 0 1rem;
+    }
+
+    .typing-text {
+        font-size: 1.3rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .tagline {
+        font-size: 1.05rem;
+        line-height: 1.7;
+        margin-bottom: 1.75rem;
+    }
+
+    .content-section {
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+        line-height: 1.3;
+    }
+
+    p {
+        font-size: 0.98rem;
+        line-height: 1.7;
+    }
+
+    .project-description {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .tag {
+        font-size: 0.85rem;
+        padding: 0.35rem 0.7rem;
     }
 
     .hero {

@@ -824,7 +824,7 @@ section h2 {
         background: white;
         flex-direction: column;
         padding: 1.5rem;
-        gap: 0.75rem;
+        gap: 0.25rem;
         box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         z-index: 99;
         list-style: none;
@@ -1135,7 +1135,7 @@ section h2 {
         background: white;
         flex-direction: column;
         padding: 1.75rem;
-        gap: 0.5rem;
+        gap: 0.25rem;
         box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         z-index: 99;
         list-style: none;

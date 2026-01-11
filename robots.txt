@@ -1,0 +1,24 @@
+# Robots.txt for dhirendraupadhyay.com.np
+# Allow all search engines to crawl the site
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+
+# Allow Google to crawl images and style sheets
+User-agent: Googlebot
+Allow: *.css
+Allow: *.js
+Allow: *.jpg
+Allow: *.png
+Allow: *.gif
+
+# Crawl delay (delay in seconds before next request)
+Crawl-delay: 1
+
+# Request rate (pages per 24 hours)
+Request-rate: 300/1d
+
+# Location of sitemap
+Sitemap: https://dhirendraupadhyay.com.np/sitemap.xml
+Sitemap: https://dhirendraupadhyay.com.np/sitemap.xml

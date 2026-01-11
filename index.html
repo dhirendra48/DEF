@@ -100,14 +100,14 @@
                 <span class="sr-only">Menu</span>
             </button>
             <ul id="primary-navigation" class="nav-links">
-                <li><a href="/#Home" class="active">Home</a></li>
-                <li><a href="/#About">About</a></li>
-                <li><a href="/#Projects">Projects</a></li>
-                <li><a href="/#Skills">Skills</a></li>
-                <li><a href="/#Workshops">Workshops</a></li>
-                <li><a href="/#Experience">Experience</a></li>
-                <li><a href="/#Blog">Blog</a></li>
-                <li><a href="/#Contact">Contact</a></li>
+                <li><a href="/Home" class="active">Home</a></li>
+                <li><a href="/About">About</a></li>
+                <li><a href="/Projects">Projects</a></li>
+                <li><a href="/Skills">Skills</a></li>
+                <li><a href="/Workshops">Workshops</a></li>
+                <li><a href="/Experience">Experience</a></li>
+                <li><a href="/Blog">Blog</a></li>
+                <li><a href="/Contact">Contact</a></li>
             </ul>
             <button id="theme-toggle" aria-label="Toggle dark mode">
                 <svg class="theme-icon" viewBox="0 0 24 24" width="24" height="24">
@@ -128,12 +128,12 @@
                     <div class="typing-text">Physics | Meteorology Student | Researcher</div>
                     <p class="tagline">Physics enthusiast with interests in biophysics, materials science, and quantum systems. B.Sc. undergraduate in Physics and Meteorology at Tribhuvan University, driven by strong analytical and problem-solving skills with a passion for research and data-driven scientific innovation.</p>
                     <div class="hero-buttons">
-                        <a href="/#Projects" class="btn btn-primary">View Projects</a>
+                        <a href="/Projects" class="btn btn-primary">View Projects</a>
                         <a href="Image/Dhirendra_Resume.pdf" target="_blank" class="btn btn-outline" id="cv-download">
                             <i class="fas fa-file-pdf"></i>
                             View CV
                         </a>
-                        <a href="/#Contact" class="btn btn-secondary">Get in Touch</a>
+                        <a href="/Contact" class="btn btn-secondary">Get in Touch</a>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -648,13 +648,13 @@
                         <div class="footer-links">
                             <h4>Menu</h4>
                             <nav class="footer-nav">
-                                <a href="/#Home">Home</a>
-                                <a href="/#About">About</a>
-                                <a href="/#Projects">Projects</a>
-                                <a href="/#Skills">Skills</a>
-                                <a href="/#Workshops">Workshops</a>
-                                <a href="/#Experience">Experience</a>
-                                <a href="/#Contact">Contact</a>
+                                <a href="/Home">Home</a>
+                                <a href="/About">About</a>
+                                <a href="/Projects">Projects</a>
+                                <a href="/Skills">Skills</a>
+                                <a href="/Workshops">Workshops</a>
+                                <a href="/Experience">Experience</a>
+                                <a href="/Contact">Contact</a>
                             </nav>
                         </div>
                         <div class="footer-contact">
@@ -940,6 +940,57 @@
                     }, 600);
                 });
             }
+        });
+    </script>
+    
+    <!-- Clean URL Routing Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle clean URLs
+            function handleRouting() {
+                const path = window.location.pathname;
+                const pages = ['Home', 'About', 'Projects', 'Skills', 'Workshops', 'Experience', 'Blog', 'Contact'];
+                
+                // Check if path matches any page
+                for (let page of pages) {
+                    if (path === '/' + page || path === '/' + page + '/') {
+                        // Scroll to section
+                        const section = document.getElementById(page);
+                        if (section) {
+                            setTimeout(() => {
+                                section.scrollIntoView({ behavior: 'smooth' });
+                            }, 100);
+                        }
+                        return;
+                    }
+                }
+                
+                // Default to home if no page specified
+                const homeSection = document.getElementById('Home');
+                if (homeSection && path === '/') {
+                    homeSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+            
+            // Handle initial load
+            handleRouting();
+            
+            // Handle browser back/forward buttons
+            window.addEventListener('popstate', handleRouting);
+            
+            // Handle navigation links
+            const links = document.querySelectorAll('a[href^="/"]');
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    // Don't intercept external links or file downloads
+                    if (!href.startsWith('//') && !href.includes('.pdf') && !href.includes('http')) {
+                        e.preventDefault();
+                        window.history.pushState({}, '', href);
+                        handleRouting();
+                    }
+                });
+            });
         });
     </script>
     <script src="js/main.js"></script>

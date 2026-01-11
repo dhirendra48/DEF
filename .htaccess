@@ -39,7 +39,7 @@
     # Clean URL routing - redirect to index.html for clean navigation
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule ^([a-zA-Z0-9_-]*)/?$ index.html [QSA,L]
+    RewriteRule ^([a-zA-Z0-9_-]*)/?$ index.html?page=$1 [QSA,L]
 </IfModule>
 
 # Set charset to UTF-8

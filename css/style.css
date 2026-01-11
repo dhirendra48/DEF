@@ -936,14 +936,43 @@ section h2 {
     section h2 {
         font-size: 1.5rem;
         margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 2rem 0 1rem;
+    }
+
+    .hero-content {
+        margin-bottom: 2rem;
+    }
+
+    .hero-buttons {
+        margin-top: 1.5rem;
+    }
+
+    .btn {
+        font-size: 0.95rem;
+        min-height: 48px;
     }
 
     .project-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .project-card {
+        margin-bottom: 1rem;
     }
 
     .skill-grid {
         grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .skill-category {
+        margin-bottom: 1.5rem;
     }
 
     .about-grid {
@@ -952,6 +981,11 @@ section h2 {
 
     .experience-item {
         margin-bottom: 1.5rem;
+        padding: 1.25rem;
+    }
+
+    .workshop-card {
+        margin-bottom: 1rem;
     }
 
     form {
@@ -962,6 +996,11 @@ section h2 {
     form textarea {
         padding: 0.75rem;
         font-size: 1rem;
+        min-height: 44px;
+    }
+
+    textarea {
+        min-height: 150px;
     }
 
     /* Mobile Contact Form Grid */
@@ -977,12 +1016,20 @@ section h2 {
 
     .form-group {
         width: 100%;
+        margin-bottom: 0.75rem;
+    }
+
+    .form-group label {
+        font-size: 0.95rem;
+        margin-bottom: 0.4rem;
     }
 
     .submit-btn {
         width: 100% !important;
-        padding: 0.875rem 1.5rem !important;
-        margin: 1rem auto !important;
+        padding: 1rem 1.5rem !important;
+        margin: 1.5rem auto !important;
+        font-size: 1rem;
+        min-height: 48px;
     }
 
     #scroll-top {
@@ -1116,8 +1163,14 @@ section h2 {
         margin-bottom: 2rem;
     }
 
+    .hero {
+        min-height: auto;
+        padding: 2rem 0 1.5rem;
+    }
+
     .project-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
     .skill-grid {
@@ -1126,6 +1179,7 @@ section h2 {
 
     .experience-item {
         margin-bottom: 2rem;
+        padding: 1.5rem;
     }
 
     form {
@@ -1136,9 +1190,14 @@ section h2 {
     form textarea {
         padding: 0.875rem;
         font-size: 1rem;
+        min-height: 44px;
     }
 
-    /* Mobile Contact Form Grid */
+    textarea {
+        min-height: 150px;
+    }
+
+    /* Tablet Contact Form Grid */
     .form-row {
         grid-template-columns: 1fr !important;
         gap: 1rem !important;
@@ -1151,12 +1210,15 @@ section h2 {
 
     .form-group {
         width: 100%;
+        margin-bottom: 1rem;
     }
 
     .submit-btn {
         width: 100% !important;
-        padding: 0.875rem 1.5rem !important;
-        margin: 1rem auto !important;
+        padding: 1rem 1.5rem !important;
+        margin: 1.5rem auto !important;
+        font-size: 1rem;
+        min-height: 48px;
     }
 
     #scroll-top {

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background -->
+  <rect width="200" height="200" fill="#1d4ed8" rx="20"/>
+  
+  <!-- DU Text -->
+  <text x="100" y="130" font-size="100" font-weight="700" fill="white" text-anchor="middle" font-family="Inter, Arial, sans-serif">DU</text>
+  
+  <!-- Decorative circle border -->
+  <circle cx="100" cy="100" r="95" fill="none" stroke="white" stroke-width="2" opacity="0.3"/>
+</svg>

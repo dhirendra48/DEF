@@ -40,6 +40,18 @@ function initMobileNav() {
                 mobileNavToggle.setAttribute('aria-expanded', 'false');
             });
         });
+        
+        // Close menu when clicking on backdrop
+        document.addEventListener('click', function(e) {
+            const isMenuOpen = primaryNav.classList.contains('active');
+            const isToggleClick = mobileNavToggle.contains(e.target);
+            const isNavClick = primaryNav.contains(e.target);
+            
+            if (isMenuOpen && !isToggleClick && !isNavClick) {
+                primaryNav.classList.remove('active');
+                mobileNavToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
     }
 }
 

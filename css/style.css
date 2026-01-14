@@ -222,13 +222,13 @@ body {
 }
 
 .theme-icon {
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
     fill: currentColor;
     transition: transform 0.4s ease;
 }
 
-.sun {
+.bulb {
     transform-origin: center;
     transform: scale(1.15);
 }
@@ -245,7 +245,7 @@ body {
     display: none;
 }
 
-[data-theme="dark"] .sun {
+[data-theme="dark"] .bulb {
     display: none;
 }
 

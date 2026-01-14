@@ -250,6 +250,19 @@ document.addEventListener('DOMContentLoaded', function() {
     initProfileImageEffect();
     addProfileParticleAnimation();
     createProfileParticles();
+
+    // Safety fallback: Ensure all reveal elements are visible after 3 seconds
+    // This prevents content from staying hidden if JS animations fail
+    setTimeout(() => {
+        const hiddenElements = document.querySelectorAll('.reveal:not(.active), .reveal-left:not(.active), .reveal-right:not(.active), .reveal-fade:not(.active)');
+        hiddenElements.forEach(el => el.classList.add('active'));
+        
+        const profileImage = document.querySelector('.profile-image');
+        if (profileImage && getComputedStyle(profileImage).opacity === '0') {
+             profileImage.style.opacity = '1';
+             profileImage.style.transform = 'translateY(0) scale(1)';
+        }
+    }, 2000);
 });
 
 // Keyboard Navigation

@@ -699,15 +699,25 @@
     <script>
         (function() {
             // Initialize EmailJS with your public key
-            // Get your Public Key from: https://dashboard.emailjs.com/admin/account
-            emailjs.init("K4IysV1dksECPGgtu"); // Replace with your EmailJS Public Key
+            try {
+                if (typeof emailjs !== 'undefined') {
+                    emailjs.init("K4IysV1dksECPGgtu"); 
+                }
+            } catch (e) {
+                console.warn('EmailJS not loaded', e);
+            }
         })();
 
         // Handle form submission
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            // Get form elements
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+                
+                if (typeof emailjs === 'undefined') {
+                     showNotification('Email service is currently unavailable. Please contact me directly via email.', 'error');
+                     return;
+                }
             const nameInput = document.getElementById('name');
             const emailInput = document.getElementById('email');
             const messageInput = document.getElementById('message');
@@ -929,12 +939,6 @@
                 heroSection.addEventListener('mouseleave', function() {
                     profileImage.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
                 });
-                
-                // Add entrance animation
-                setTimeout(() => {
-                    profileImage.style.opacity = '1';
-                    profileImage.style.transform = 'translateY(0) scale(1)';
-                }, 500);
                 
                 // Add click animation for mobile
                 profileImage.addEventListener('click', function() {

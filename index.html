@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Portfolio of Dhirendra Prasad Upadhyay, B.Sc. Physics & Meteorology undergraduate. Research in Biophysics, Materials Science, and Quantum Systems.">
-    <meta name="keywords" content="Dhirendra Prasad Upadhyay, Physics Portfolio, Biophysics, Materials Science, Quantum Systems, Research, Projects">
     <meta name="author" content="Dhirendra Prasad Upadhyay">
 
     <!-- Open Graph / Social Media -->
@@ -38,6 +36,7 @@
     <link rel="stylesheet" href="css/certifications.css">
     <link rel="stylesheet" href="css/blog.css">
     <link rel="stylesheet" href="css/background.css">
+    <link rel="stylesheet" href="css/animations.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -102,7 +101,9 @@
                 </span>
                 <span class="sr-only">Menu</span>
             </button>
+            <div class="nav-overlay"></div>
             <ul id="primary-navigation" class="nav-links">
+                <button class="nav-close-btn">&times;</button>
                 <li><a href="/Home" class="active">Home</a></li>
                 <li><a href="/About">About</a></li>
                 <li><a href="/Projects">Projects</a></li>
@@ -125,7 +126,7 @@
         <section id="Home" class="hero">
             <div class="hero-overlay"></div>
             <div class="container hero-content">
-                <div class="hero-text">
+                <div class="hero-text reveal-left">
                     <span class="welcome-text">Hello, I'm</span>
                     <h1 class="name">Dhirendra Prasad Upadhyay</h1>
                     <div class="typing-text">Physics | Meteorology Student | Researcher</div>
@@ -139,7 +140,7 @@
                         <a href="/Contact" class="btn btn-secondary">Get in Touch</a>
                     </div>
                 </div>
-                <div class="hero-image">
+                <div class="hero-image reveal-right">
                     <div class="hex-decoration hex-1"></div>
                     <div class="hex-decoration hex-2"></div>
                     <div class="hex-decoration hex-3"></div>
@@ -152,15 +153,15 @@
 
         <section id="About" class="about">
             <div class="container">
-                <h2>About Me</h2>
+                <h2 class="reveal">About Me</h2>
                 <div class="about-content">
-                    <div class="content-section">
+                    <div class="content-section reveal-fade">
                         <p>I am a B.Sc. undergraduate student in Physics and Meteorology at Tri-Chandra Campus, Tribhuvan University, with interests in biophysics, materials science, and quantum systems. I focus on analytical thinking, problem-solving, and computational approaches to scientific research and data-driven analysis, while also serving as an Event Manager at NSSR, where I coordinate academic and research-oriented programs. I aspire to pursue challenging roles in physics or mathematics and continuously develop my skills to contribute meaningfully to scientific and applied research.</p>
                     </div>
                     
                     <div class="main-sections">
                         <div class="about-grid">
-                            <div class="education">
+                            <div class="education reveal-left">
                                 <h3>Education</h3>
                                 <div class="education-item">
                                     <h4>Bachelor of Science in Physics</h4>
@@ -182,7 +183,7 @@
                                 </div> -->
                             </div>
                             
-                            <div class="research-interests">
+                            <div class="research-interests reveal-right">
                                 <h3>Research Interests</h3>
                                 <div class="interest-list">
                                     <!-- <div class="interest-item">
@@ -216,7 +217,7 @@
 
         <section id="Projects" class="projects">
             <div class="container">
-                <h2>Projects</h2>
+                <h2 class="reveal">Projects</h2>
                 <div class="project-grid">
                     <article class="project-card">
                         <div class="project-card-content">
@@ -261,9 +262,9 @@
 
         <section id="Skills" class="skills">
             <div class="container">
-                <h2>Skills</h2>
+                <h2 class="reveal">Skills</h2>
                 <div class="skills-grid">
-                    <div class="skill-category">
+                    <div class="skill-category reveal-fade">
                         <h3>Programming</h3>
                         <ul>
                             <li>Python</li>
@@ -273,7 +274,7 @@
                             <li>JavaScript</li>
                         </ul>
                     </div>
-                    <div class="skill-category">
+                    <div class="skill-category reveal-fade delay-200">
                         <h3>Scientific Tools</h3>
                         <ul>
                             <li>Origin</li>
@@ -283,7 +284,7 @@
                             <li>VESTA, XCrySDen</li>
                         </ul>
                     </div>
-                    <div class="skill-category">
+                    <div class="skill-category reveal-fade delay-400">
                         <h3>Soft Skills</h3>
                         <ul>
                             <li>Leadership</li>
@@ -299,7 +300,7 @@
 
         <section id="Workshops" class="workshops">
             <div class="container">
-                <h2>Workshops & Colloquiums</h2>
+                <h2 class="reveal">Workshops & Colloquiums</h2>
                 <div class="workshops-grid">
                     <article class="workshop-card">
                         <div class="workshop-content">
@@ -426,9 +427,9 @@
 
         <section id="Experience" class="experience">
             <div class="container">
-                <h2>Experience</h2>
+                <h2 class="reveal">Experience</h2>
                 <div class="experience-timeline">
-                    <article class="experience-item">
+                    <article class="experience-item reveal-left">
                         <div class="experience-content">
                             <div class="experience-header">
                                 <h3>Event Manager</h3>
@@ -494,7 +495,7 @@
                             </div>
                         </div>
                     </article>
-                    <article class="experience-item">
+                    <article class="experience-item reveal-right">
                         <div class="experience-content">
                             <div class="experience-header">
                                 <h3>HR Manager</h3>
@@ -523,7 +524,7 @@
 
         <section id="Blog" class="blog">
             <div class="container">
-                <h2>Latest Blog Posts</h2>
+                <h2 class="reveal">Latest Blog Posts</h2>
                 <div class="blog-grid">
                     <article class="blog-card">
                         <div class="blog-image">
@@ -593,10 +594,10 @@
 
         <section id="Contact" class="contact">
             <div class="container">
-                <h2 style="text-align: center;">Contact Me</h2>
-                <p class="section-subtitle" style="text-align: center; max-width: 600px; margin: 0 auto 2rem;">Let's collaborate on research or discuss opportunities</p>
+                <h2 class="reveal" style="text-align: center;">Contact Me</h2>
+                <p class="section-subtitle reveal-fade" style="text-align: center; max-width: 600px; margin: 0 auto 2rem;">Let's collaborate on research or discuss opportunities</p>
                 <div class="contact-content">
-                    <form id="contact-form" class="contact-form" style="margin: 0 auto; max-width: 900px;">
+                    <form id="contact-form" class="contact-form reveal-fade" style="margin: 0 auto; max-width: 900px;">
                         <div class="form-header" style="text-align: center; margin-bottom: 2rem;">
                             <h3>Send Me a Message</h3>
                             <p>I'll get back to you as soon as possible</p>

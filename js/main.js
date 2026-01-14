@@ -25,33 +25,50 @@ function initThemeToggle() {
 function initMobileNav() {
     const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
     const primaryNav = document.getElementById('primary-navigation');
+    const navOverlay = document.querySelector('.nav-overlay');
+    const navCloseBtn = document.querySelector('.nav-close-btn');
     
     if (mobileNavToggle) {
         mobileNavToggle.addEventListener('click', function() {
             primaryNav.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+            document.body.classList.toggle('menu-open', primaryNav.classList.contains('active'));
             mobileNavToggle.setAttribute('aria-expanded', primaryNav.classList.contains('active'));
         });
+        
+        // Close menu with X button
+        if (navCloseBtn) {
+            navCloseBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                primaryNav.classList.remove('active');
+                navOverlay.classList.remove('active');
+                document.body.classList.remove('menu-open');
+                mobileNavToggle.setAttribute('aria-expanded', 'false');
+            });
+        }
         
         // Close menu when a link is clicked
         const navLinks = primaryNav.querySelectorAll('a');
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 primaryNav.classList.remove('active');
+                navOverlay.classList.remove('active');
+                document.body.classList.remove('menu-open');
                 mobileNavToggle.setAttribute('aria-expanded', 'false');
             });
         });
         
-        // Close menu when clicking on backdrop
-        document.addEventListener('click', function(e) {
-            const isMenuOpen = primaryNav.classList.contains('active');
-            const isToggleClick = mobileNavToggle.contains(e.target);
-            const isNavClick = primaryNav.contains(e.target);
-            
-            if (isMenuOpen && !isToggleClick && !isNavClick) {
-                primaryNav.classList.remove('active');
-                mobileNavToggle.setAttribute('aria-expanded', 'false');
-            }
-        });
+        // Close menu when clicking on overlay
+        if (navOverlay) {
+            navOverlay.addEventListener('click', function(e) {
+                if (e.target === navOverlay) {
+                    primaryNav.classList.remove('active');
+                    navOverlay.classList.remove('active');
+                    document.body.classList.remove('menu-open');
+                    mobileNavToggle.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
     }
 }
 
@@ -127,22 +144,27 @@ function initScrollTop() {
 // Intersection Observer for animations
 function initIntersectionObserver() {
     const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -100px 0px'
+        threshold: 0.15,
+        rootMargin: '0px 0px -50px 0px'
     };
     
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.animation = 'fadeInUp 0.6s ease-out forwards';
+                entry.target.classList.add('active');
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
     
-    // Observe project cards, blog cards, workshop cards
-    document.querySelectorAll('.project-card, .blog-card, .workshop-card').forEach(el => {
-        el.style.opacity = '0';
+    // Select all reveal elements
+    const elementsToReveal = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-fade, .project-card, .blog-card, .workshop-card');
+    
+    elementsToReveal.forEach(el => {
+        // checks if element already has class attached to avoid double animations if used alongside class approach
+        if (el.classList.contains('project-card') || el.classList.contains('blog-card') || el.classList.contains('workshop-card')) {
+             el.classList.add('reveal'); // Ensure legacy cards get the base reveal style
+        }
         observer.observe(el);
     });
 }

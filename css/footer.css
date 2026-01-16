@@ -68,33 +68,75 @@
     justify-content: center;
     width: 45px;
     height: 45px;
-    background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    color: white;
     font-size: 1.25rem;
     transition: all 0.3s ease;
     border: 2px solid transparent;
 }
 
+.social-link.facebook {
+    background: rgba(24, 119, 242, 0.1);
+    color: #1877f2;
+}
+
+.social-link.linkedin {
+    background: rgba(10, 102, 194, 0.1);
+    color: #0a66c2;
+}
+
+.social-link.github {
+    background: rgba(51, 51, 51, 0.1);
+    color: #333;
+}
+
+.social-link.researchgate {
+    background: rgba(12, 181, 31, 0.1);
+    color: #0cb51f;
+}
+
+[data-theme="dark"] .social-link.facebook {
+    background: rgba(24, 119, 242, 0.15);
+    color: #1877f2;
+}
+
+[data-theme="dark"] .social-link.linkedin {
+    background: rgba(10, 102, 194, 0.15);
+    color: #0a66c2;
+}
+
+[data-theme="dark"] .social-link.github {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+[data-theme="dark"] .social-link.researchgate {
+    background: rgba(12, 181, 31, 0.15);
+    color: #0cb51f;
+}
+
 .social-link:hover {
     transform: translateY(-3px);
-    border-color: #1d4ed8;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .social-link.facebook:hover {
     background: #1877f2;
+    color: white;
 }
 
 .social-link.linkedin:hover {
     background: #0a66c2;
+    color: white;
 }
 
 .social-link.github:hover {
     background: #333;
+    color: white;
 }
 
 .social-link.researchgate:hover {
     background: #0cb51f;
+    color: white;
 }
 
 /* Footer Links */

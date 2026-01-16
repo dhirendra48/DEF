@@ -228,7 +228,7 @@ body {
     transition: transform 0.4s ease;
 }
 
-.bulb {
+.sun {
     transform-origin: center;
     transform: scale(1.15);
 }
@@ -245,7 +245,7 @@ body {
     display: none;
 }
 
-[data-theme="dark"] .bulb {
+[data-theme="dark"] .sun {
     display: none;
 }
 

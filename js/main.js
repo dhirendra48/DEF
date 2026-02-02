@@ -292,3 +292,72 @@ function announceNavChange(sectionName) {
     
     setTimeout(() => announcement.remove(), 1000);
 }
+// Skills Loading Animation
+function loadSkills() {
+    const skillsData = [
+        {
+            category: 'Programming',
+            skills: [
+                { name: 'Python', percentage: '90%' },
+                { name: 'R', percentage: '85%' },
+                { name: 'C,C++', percentage: '80%' },
+                { name: 'MATLAB', percentage: '85%' },
+                { name: 'JavaScript', percentage: '75%' }
+            ]
+        },
+        {
+            category: 'Scientific Tools',
+            skills: [
+                { name: 'Origin', percentage: '88%' },
+                { name: 'GIS Tools', percentage: '80%' },
+                { name: 'LaTeX', percentage: '90%' },
+                { name: 'Quantum Expresso', percentage: '85%' },
+                { name: 'VESTA, XCrySDen', percentage: '82%' }
+            ]
+        },
+        {
+            category: 'Soft Skills',
+            skills: [
+                { name: 'Leadership', percentage: '88%' },
+                { name: 'Event Management', percentage: '90%' },
+                { name: 'Research', percentage: '92%' },
+                { name: 'Team Collaboration', percentage: '89%' },
+                { name: 'Communication', percentage: '87%' }
+            ]
+        }
+    ];
+
+    // Simulate loading delay (2.5 seconds)
+    setTimeout(() => {
+        const skillsGrid = document.getElementById('skillsGrid');
+        if (!skillsGrid) return;
+
+        skillsGrid.innerHTML = '';
+
+        const delays = ['', 'delay-200', 'delay-400'];
+
+        skillsData.forEach((skillGroup, index) => {
+            const skillCategory = document.createElement('div');
+            skillCategory.className = `skill-category reveal-fade ${delays[index]}`;
+
+            const title = document.createElement('h3');
+            title.textContent = skillGroup.category;
+
+            const list = document.createElement('ul');
+            skillGroup.skills.forEach(skill => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `${skill.name} <span class="skill-percentage">${skill.percentage}</span>`;
+                list.appendChild(listItem);
+            });
+
+            skillCategory.appendChild(title);
+            skillCategory.appendChild(list);
+            skillsGrid.appendChild(skillCategory);
+        });
+    }, 2500);
+}
+
+// Initialize on DOM ready
+document.addEventListener('DOMContentLoaded', function() {
+    loadSkills();
+});

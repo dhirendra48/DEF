@@ -94,6 +94,11 @@
     color: #0cb51f;
 }
 
+.social-link.orcid {
+    background: rgba(166, 206, 57, 0.1);
+    color: #a6ce39;
+}
+
 [data-theme="dark"] .social-link.facebook {
     background: rgba(24, 119, 242, 0.15);
     color: #1877f2;
@@ -112,6 +117,11 @@
 [data-theme="dark"] .social-link.researchgate {
     background: rgba(12, 181, 31, 0.15);
     color: #0cb51f;
+}
+
+[data-theme="dark"] .social-link.orcid {
+    background: rgba(166, 206, 57, 0.15);
+    color: #a6ce39;
 }
 
 .social-link:hover {
@@ -136,6 +146,11 @@
 
 .social-link.researchgate:hover {
     background: #0cb51f;
+    color: white;
+}
+
+.social-link.orcid:hover {
+    background: #a6ce39;
     color: white;
 }
 

@@ -133,9 +133,9 @@
                     <p class="tagline">Physics enthusiast with interests in biophysics, materials science, and quantum systems. B.Sc. undergraduate in Physics and Meteorology at Tribhuvan University, driven by strong analytical and problem-solving skills with a passion for research and data-driven scientific innovation.</p>
                     <div class="hero-buttons">
                         <a href="#Projects" class="btn btn-primary">View Projects</a>
-                        <a href="Image/Dhirendra_Resume.pdf" target="_blank" class="btn btn-outline" id="cv-download">
+                        <a href="#Contact" class="btn btn-outline" id="cv-request" onclick="document.getElementById('cvRequestField').focus();">
                             <i class="fas fa-file-pdf"></i>
-                            View CV
+                            Request CV
                         </a>
                         <a href="#Contact" class="btn btn-secondary">Get in Touch</a>
                     </div>
@@ -658,6 +658,12 @@
                         <div class="form-group">
                             <label for="message">Message</label>
                             <textarea id="message" name="message" placeholder="Your message" required style="min-height: 120px;"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvRequest">
+                                <input type="checkbox" id="cvRequestField" name="cvRequest"> Request my CV
+                            </label>
+                            <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">Check this box if you would like me to send you my CV</p>
                         </div>
                         <button type="submit" class="submit-btn" style="width: auto; padding: 0.8rem 2rem; margin: 1rem auto; display: block;">
                             <i class="fas fa-paper-plane"></i>

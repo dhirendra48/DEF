@@ -463,8 +463,8 @@ section h2 {
 .profile-image {
     width: 100%;
     aspect-ratio: 1;
-    border-radius: 0;
-    overflow: visible;
+    border-radius: 50%;
+    overflow: hidden;
     background: linear-gradient(135deg, #3b82f6 0%, #1e40af 50%, #7c3aed 100%);
     position: relative;
     opacity: 0;
@@ -474,7 +474,7 @@ section h2 {
     box-shadow: 
         0 30px 80px rgba(29, 78, 216, 0.4),
         0 0 0 2px rgba(139, 92, 246, 0.3);
-    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    clip-path: none;
     z-index: 2;
     display: flex;
     align-items: center;
@@ -491,7 +491,8 @@ section h2 {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, transparent 50%);
     pointer-events: none;
     z-index: 2;
-    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    border-radius: 50%;
+    clip-path: none;
 }
 
 .profile-image img {
@@ -500,7 +501,8 @@ section h2 {
     object-fit: cover;
     display: block;
     transition: var(--transition);
-    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    border-radius: 50%;
+    clip-path: none;
 }
 
 .profile-image:hover {

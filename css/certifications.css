@@ -163,7 +163,6 @@
 
 .experience-item-wrapper:hover .experience-header h3 {
     color: var(--primary-color);
-    text-decoration: underline;
 }
 
 .experience-item:hover {
@@ -174,7 +173,6 @@
 
 .experience-item:hover .experience-header h3 {
     color: var(--primary-color);
-    text-decoration: underline;
 }
 
 [data-theme="dark"] .experience-item {

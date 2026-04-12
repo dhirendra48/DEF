@@ -127,6 +127,14 @@
     background: linear-gradient(135deg, #0a0e27 0%, #0d1628 100%);
 }
 
+.experience-item-wrapper {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
 .experience-timeline {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -142,11 +150,20 @@
     transition: all 0.3s ease;
     animation: fadeInUp 0.6s ease-out;
     position: relative;
+    min-height: 360px;
+    display: flex;
+    flex-direction: column;
 }
 
-[data-theme="dark"] .experience-item {
-    background: #1a1a2e;
-    border-color: #334155;
+.experience-item-wrapper:hover .experience-item {
+    transform: translateY(-8px);
+    border-color: var(--primary-color);
+    box-shadow: 0 15px 40px rgba(29, 78, 216, 0.15);
+}
+
+.experience-item-wrapper:hover .experience-header h3 {
+    color: var(--primary-color);
+    text-decoration: underline;
 }
 
 .experience-item:hover {
@@ -155,12 +172,35 @@
     box-shadow: 0 15px 40px rgba(29, 78, 216, 0.15);
 }
 
+.experience-item:hover .experience-header h3 {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+[data-theme="dark"] .experience-item {
+    background: #1a1a2e;
+    border-color: #334155;
+}
+
+[data-theme="dark"] .experience-item-wrapper:hover .experience-item {
+    border-color: #3b82f6;
+    box-shadow: 0 15px 40px rgba(59, 130, 246, 0.2);
+}
+
+[data-theme="dark"] .experience-item:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 15px 40px rgba(59, 130, 246, 0.2);
+}
+
 .experience-item::before {
     display: none;
 }
 
 .experience-content {
     padding-left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .experience-header {
@@ -212,13 +252,15 @@
     color: var(--text-light);
     font-size: 0.95rem;
     line-height: 1.6;
-    margin: 1rem 0 1.5rem 0;
+    margin: 1rem 0 auto 0;
+    flex-grow: 1;
 }
 
 .experience-highlights {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
+    margin-top: 1.5rem;
 }
 
 .highlight {

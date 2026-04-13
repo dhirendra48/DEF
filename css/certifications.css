@@ -135,6 +135,13 @@
     transition: all 0.3s ease;
 }
 
+.experience-item-wrapper:hover,
+.experience-item-wrapper:focus,
+.experience-item-wrapper:active,
+.experience-item-wrapper:visited {
+    text-decoration: none;
+}
+
 .experience-timeline {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

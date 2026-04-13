@@ -97,7 +97,7 @@
             </button>
             <div class="nav-overlay"></div>
             <ul id="primary-navigation" class="nav-links">
-                <button class="nav-close-btn">&times;</button>
+                <button type="button" class="nav-close-btn" aria-label="Close navigation menu">&times;</button>
                 <li><a href="#Home" class="active">Home</a></li>
                 <li><a href="#About">About</a></li>
                 <li><a href="#Projects">Projects</a></li>
@@ -127,9 +127,9 @@
                     <p class="tagline">Physics enthusiast with interests in biophysics, materials science, and quantum systems. B.Sc. undergraduate in Physics and Meteorology at Tribhuvan University, driven by strong analytical and problem-solving skills with a passion for research and data-driven scientific innovation.</p>
                     <div class="hero-buttons">
                         <a href="#Projects" class="btn btn-primary">View Projects</a>
-                        <a href="#Contact" class="btn btn-outline" id="cv-request" onclick="document.getElementById('cvRequestField').focus();">
+                        <a href="Image/Dhirendra_Resume.pdf" class="btn btn-outline" id="cv-request" target="_blank" rel="noopener noreferrer" aria-label="Open Dhirendra Prasad Upadhyay's CV as a PDF in a new tab">
                             <i class="fas fa-file-pdf"></i>
-                            Request CV
+                            View CV (PDF)
                         </a>
                         <a href="#Contact" class="btn btn-secondary">Get in Touch</a>
                     </div>
@@ -342,78 +342,18 @@
                     <article class="workshop-card">
                         <div class="workshop-content">
                             <div class="workshop-header">
-                                <h3>Quantum Computing Certificate</h3>
-                                <span class="workshop-date">2024–25</span>
+                                <h3>Aspire Leaders Program</h3>
+                                <span class="workshop-date">April 2026</span>
                             </div>
-                            <p class="workshop-description">Successfully completed 2 semesters of advanced quantum computing coursework, covering quantum algorithms, circuit design, and practical applications.</p>
+                            <p class="workshop-description">Completed a 40-hour leadership development program focused on critical thinking, communication, and global leadership skills.</p>
                             <div class="workshop-details">
                                 <span class="workshop-location">
-                                    <i class="fas fa-certificate"></i>
-                                    The Coding School
-                                </span>
-                                <span class="workshop-type">
-                                    <i class="fas fa-clock"></i>
-                                    2 Semesters
-                                </span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="workshop-card">
-                        <div class="workshop-content">
-                            <div class="workshop-header">
-                                <h3>Workshop on Experimental Plasma Physics</h3>
-                                <span class="workshop-date">2024</span>
-                            </div>
-                            <p class="workshop-description">Participated in hands-on experimental plasma physics workshop, exploring plasma behavior and measurement techniques.</p>
-                            <div class="workshop-details">
-                                <span class="workshop-location">
-                                    <i class="fas fa-location-dot"></i>
-                                    Central Department of Physics, TU
-                                </span>
-                                <span class="workshop-type">
-                                    <i class="fas fa-flask"></i>
-                                    Workshop
-                                </span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="workshop-card">
-                        <div class="workshop-content">
-                            <div class="workshop-header">
-                                <h3>Workshop on Space and Atmospheric Physics</h3>
-                                <span class="workshop-date">2024</span>
-                            </div>
-                            <p class="workshop-description">Engaged in comprehensive study of space physics and atmospheric phenomena, with focus on practical applications.</p>
-                            <div class="workshop-details">
-                                <span class="workshop-location">
-                                    <i class="fas fa-location-dot"></i>
-                                    St. Xavier's College
-                                </span>
-                                <span class="workshop-type">
-                                    <i class="fas fa-meteor"></i>
-                                    Workshop
-                                </span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="workshop-card">
-                        <div class="workshop-content">
-                            <div class="workshop-header">
-                                <h3>South Asian Astrophysics Summer School</h3>
-                                <span class="workshop-date">June 2025</span>
-                            </div>
-                            <p class="workshop-description">Participated in SAASS 2025, focusing on advanced astrophysics concepts and research methodologies in the South Asian context.</p>
-                            <div class="workshop-details">
-                                <span class="workshop-location">
-                                    <i class="fas fa-star"></i>
-                                    SAASS 2025
-                                </span>
-                                <span class="workshop-type">
                                     <i class="fas fa-graduation-cap"></i>
-                                    Summer School
+                                    Aspire Institute Online
+                                </span>
+                                <span class="workshop-type">
+                                    <i class="fas fa-users"></i>
+                                    Leadership Program
                                 </span>
                             </div>
                         </div>
@@ -458,6 +398,106 @@
                             </div>
                         </div>
                     </article>
+
+                    <article class="workshop-card">
+                        <div class="workshop-content">
+                            <div class="workshop-header">
+                                <h3>South Asian Astrophysics Summer School</h3>
+                                <span class="workshop-date">June 2025</span>
+                            </div>
+                            <p class="workshop-description">Participated in SAASS 2025, focusing on advanced astrophysics concepts and research methodologies in the South Asian context.</p>
+                            <div class="workshop-details">
+                                <span class="workshop-location">
+                                    <i class="fas fa-star"></i>
+                                    SAASS 2025
+                                </span>
+                                <span class="workshop-type">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    Summer School
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="workshop-card">
+                        <div class="workshop-content">
+                            <div class="workshop-header">
+                                <h3>Workshop on Data Analysis Techniques and Documentation</h3>
+                                <span class="workshop-date">02 – 04 Jun 2025</span>
+                            </div>
+                            <p class="workshop-description">Gained hands-on experience in atmospheric data analysis and scientific documentation techniques.</p>
+                            <div class="workshop-details">
+                                <span class="workshop-location">
+                                    <i class="fas fa-location-dot"></i>
+                                    Department of Physics, Tri-Chandra Multiple Campus, Ghantaghar, Kathmandu
+                                </span>
+                                <span class="workshop-type">
+                                    <i class="fas fa-chart-line"></i>
+                                    Workshop
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="workshop-card">
+                        <div class="workshop-content">
+                            <div class="workshop-header">
+                                <h3>Quantum Computing Certificate</h3>
+                                <span class="workshop-date">2024–25</span>
+                            </div>
+                            <p class="workshop-description">Successfully completed 2 semesters of advanced quantum computing coursework, covering quantum algorithms, circuit design, and practical applications.</p>
+                            <div class="workshop-details">
+                                <span class="workshop-location">
+                                    <i class="fas fa-certificate"></i>
+                                    The Coding School
+                                </span>
+                                <span class="workshop-type">
+                                    <i class="fas fa-clock"></i>
+                                    2 Semesters
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="workshop-card">
+                        <div class="workshop-content">
+                            <div class="workshop-header">
+                                <h3>Workshop on Experimental Plasma Physics</h3>
+                                <span class="workshop-date">2 - 4 Aug 2024</span>
+                            </div>
+                            <p class="workshop-description">Participated in hands-on experimental plasma physics workshop, exploring plasma behavior and measurement techniques.</p>
+                            <div class="workshop-details">
+                                <span class="workshop-location">
+                                    <i class="fas fa-location-dot"></i>
+                                    Central Department of Physics, TU
+                                </span>
+                                <span class="workshop-type">
+                                    <i class="fas fa-flask"></i>
+                                    Workshop
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="workshop-card">
+                        <div class="workshop-content">
+                            <div class="workshop-header">
+                                <h3>Workshop on Space and Atmospheric Physics</h3>
+                                <span class="workshop-date">1-2 Oct 2024</span>
+                            </div>
+                            <p class="workshop-description">Engaged in comprehensive study of space physics and atmospheric phenomena, with focus on practical applications.</p>
+                            <div class="workshop-details">
+                                <span class="workshop-location">
+                                    <i class="fas fa-location-dot"></i>
+                                    St. Xavier's College
+                                </span>
+                                <span class="workshop-type">
+                                    <i class="fas fa-meteor"></i>
+                                    Workshop
+                                </span>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -466,30 +506,6 @@
             <div class="container">
                 <h2 class="reveal">Experience</h2>
                 <div class="experience-timeline">
-                    <a href="https://nssrnepal.org/team.html" target="_blank" rel="noopener noreferrer" class="experience-item-wrapper">
-                        <article class="experience-item reveal-left">
-                            <div class="experience-content">
-                                <div class="experience-header">
-                                    <h3>Event Head</h3>
-                                <span class="experience-date">Aug 2025 - Present</span>
-                            </div>
-                            <p class="experience-organization">
-                                <i class="fas fa-building"></i>
-                                NSSR (Nepalese Society of Student Researchers)
-                            </p>
-                            <p class="experience-location">
-                                <i class="fas fa-map-marker-alt"></i>
-                                Kathmandu, Nepal
-                            </p>
-                            <p class="experience-description">Coordinate and manage academic and research-oriented programs, events, and seminars. Responsible for planning, organization, and execution of scientific workshops and collaborative initiatives to promote research and learning in the scientific community.</p>
-                            <div class="experience-highlights">
-                                <span class="highlight">Event Planning</span>
-                                <span class="highlight">Team Coordination</span>
-                                <span class="highlight">Program Management</span>
-                            </div>
-                        </div>
-                        </article>
-                    </a>
                     <a href="https://www.linkedin.com/posts/dhirendra-prasad-upadhyay-311a28316_honored-to-receive-a-certificate-of-appreciation-share-7433092538653212672-6WdT?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFA98b0BuxGjURzaLTP7TTzB5y9w5bfmKII" target="_blank" rel="noopener noreferrer" class="experience-item-wrapper">
                         <article class="experience-item">
                             <div class="experience-content">
@@ -514,7 +530,31 @@
                             </div>
                         </article>
                     </a>
-                                        <article class="experience-item">
+                    <a href="https://nssrnepal.org/team.html" target="_blank" rel="noopener noreferrer" class="experience-item-wrapper">
+                        <article class="experience-item reveal-left">
+                            <div class="experience-content">
+                                <div class="experience-header">
+                                    <h3>Event Head</h3>
+                                <span class="experience-date">Aug 2025 - Present</span>
+                            </div>
+                            <p class="experience-organization">
+                                <i class="fas fa-building"></i>
+                                NSSR (Nepalese Society of Student Researchers)
+                            </p>
+                            <p class="experience-location">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Kathmandu, Nepal
+                            </p>
+                            <p class="experience-description">Coordinate and manage academic and research-oriented programs, events, and seminars. Responsible for planning, organization, and execution of scientific workshops and collaborative initiatives to promote research and learning in the scientific community.</p>
+                            <div class="experience-highlights">
+                                <span class="highlight">Event Planning</span>
+                                <span class="highlight">Team Coordination</span>
+                                <span class="highlight">Program Management</span>
+                            </div>
+                        </div>
+                        </article>
+                    </a>
+                    <article class="experience-item">
                         <div class="experience-content">
                             <div class="experience-header">
                                 <h3>Lightning Lab </h3>
@@ -558,7 +598,6 @@
                             </div>
                         </div>
                     </article>
-
                 </div>
             </div>
         </section>
@@ -656,12 +695,6 @@
                         <div class="form-group">
                             <label for="message">Message</label>
                             <textarea id="message" name="message" placeholder="Your message" required style="min-height: 120px;"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="cvRequest">
-                                <input type="checkbox" id="cvRequestField" name="cvRequest"> Request my CV
-                            </label>
-                            <p style="font-size: 0.9rem; color: #666; margin-top: 0.5rem;">Check this box if you would like me to send you my CV</p>
                         </div>
                         <button type="submit" class="submit-btn" style="width: auto; padding: 0.8rem 2rem; margin: 1rem auto; display: block;">
                             <i class="fas fa-paper-plane"></i>

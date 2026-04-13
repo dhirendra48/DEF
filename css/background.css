@@ -120,6 +120,32 @@
     flex-direction: column;
 }
 
+.cv-access-note {
+    margin-top: 0.25rem;
+}
+
+.cv-access-text {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.cv-access-text a {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+}
+
+.cv-access-text a:hover {
+    color: var(--secondary-color);
+}
+
+.cv-access-text a:focus-visible {
+    outline-offset: 2px;
+}
+
 .form-group label {
     font-weight: 600;
     margin-bottom: 0.5rem;

@@ -219,6 +219,11 @@
     box-shadow: 0 10px 20px rgba(29, 78, 216, 0.3);
 }
 
+/* Hide CV link when CV should not be visible */
+#cv-request {
+    display: none !important;
+}
+
 .submit-btn:disabled {
     opacity: 0.6;
     cursor: not-allowed;

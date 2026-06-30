@@ -175,7 +175,7 @@ function initTypingEffect() {
     if (!typingText) return;
     
     const phrases = [
-        'Physics | Meteorology Student | Researcher',
+        'Physics | Student | Researcher',
         'Biophysics Enthusiast',
         'Materials Science Explorer',
         'Computational Physics Practitioner',
